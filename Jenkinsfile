@@ -1,4 +1,4 @@
-@Library('arthur-shared-library')_
+@Library('shared-library')_
 
 pipeline {
      environment {
