@@ -88,7 +88,7 @@ pipeline {
       }    
      
      stage('STAGING - Deploy app') {
-      agent { docker { image 'framela/dind' } }
+      agent any
       steps {
           script {
             sh """
@@ -105,7 +105,7 @@ pipeline {
        when {
               expression { GIT_BRANCH == 'origin/master' }
             }
-      agent { docker { image 'framela/dind' } }
+      agent any
 
       steps {
           script {
